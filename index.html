@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Черновик Калькулятора</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- main>.container>.calculator>.calculator-container>(.calculator-top>input#equation+textarea#history[name="history"])+.calculator-buttons-basic>button#clear{Очистить}+button#backspace{Удалить символ}+button#plus{+}+button#minus{-}+button#multiply{x}+button#divide{/}+button#equal{=} -->
+    
+    <!-- Расширенная версия калькулятора: -->
+    <!-- main>.container>.calculator>.calculator-container>(.calculator-top>input#equation+textarea#history[name="history"])+(.calculator-buttons-basic>button#clear{Очистить}+button#backspace{Удалить символ}+button#plus{+}+button#minus{-}+button#multiply{x}+button#divide{/}+button#equal{=})+.calculator-buttons-extra>button#sqr{sqr}+button#sqrt{sqrt}+button#power{x^y}+button#deg{deg}+button#sin{sin}+button#cos{cos}+button#tan{tg}+button#cotan{ctg}+button#asin{arcsin}+button#acos{arccos}+button#atan{arctg}+button#acotan{arc_ctg}+button#pi{pi}+button#e{e} -->
+
+    <!-- print(evaluate('2 inch to cm')) // 5.08 cm
+    print(evaluate('cos(45 deg)')) // 0.70711 
+    
+    function ctg(x) { return 1 / Math.tan(x); }
+    function arcctg(x) { return Math.PI / 2 - Math.atan(x); }
+    -->
+
+    <!-- https://mathjs.org/docs/getting_started.html -->
+
+
+    <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="calculator-container">
+                    <div class="calculator-top">
+                        <input type="text" id="equation">
+                        <textarea name="history" id="history"></textarea>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button id="clear">Очистить</button>
+                        <button id="backspace">Удалить символ</button>
+                        <button id="plus">+</button>
+                        <button id="minus">–</button>
+                        <button id="multiply">x</button>
+                        <button id="divide">/</button>
+                        <button id="equal">=</button></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Строка ниже — подключение библиотеки mathjs -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.2.0/math.js"></script> -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/mathjs@13.2.0/lib/browser/math.min.js
+    "></script>
+    <script src="script.js"></script>
+</body>
+</html>
